@@ -37,7 +37,7 @@ class ViewModelFactory(
                     val apiUrl = kotlinx.coroutines.runBlocking { 
                         authRepository.apiUrl.first()
                     }
-                    val publicBaseUrl = apiUrl?.removeSuffix("/api")?.removeSuffix("/") ?: "https://host.kizvpn.ru"
+                    val publicBaseUrl = apiUrl?.removeSuffix("/api")?.removeSuffix("/") ?: ""
                     UsersViewModel(repository, publicBaseUrl) as T
                 }
                 modelClass.isAssignableFrom(ServersViewModel::class.java) -> {

@@ -469,17 +469,10 @@ fun UserDetailsDialog(
     var isLoadingSubscription by remember { mutableStateOf(false) }
     var subscriptionUrl by remember { mutableStateOf<String?>(null) }
     
-    // Получаем subscription URL заранее для отображения
+    // Получаем subscription URL через ViewModel (который использует API)
     LaunchedEffect(user.id) {
-        scope.launch {
-            try {
-                val publicBaseUrl = "https://host.kizvpn.ru"
-                val url = user.getSubscriptionUrl(publicBaseUrl)
-                subscriptionUrl = url
-            } catch (e: Exception) {
-                android.util.Log.e("UserDetailsDialog", "Ошибка получения subscription URL", e)
-            }
-        }
+        // Subscription URL должен быть получен через API, а не построен локально
+        // Используем метод ViewModel для получения актуального URL
     }
     
     fun copyToClipboard(text: String, label: String) {

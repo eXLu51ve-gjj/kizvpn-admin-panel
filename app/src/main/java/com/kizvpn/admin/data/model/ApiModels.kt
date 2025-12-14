@@ -140,7 +140,7 @@ data class User(
         return expiryDate ?: expire
     }
     
-    fun getSubscriptionUrl(baseUrl: String = "https://host.kizvpn.ru"): String? {
+    fun getSubscriptionUrl(baseUrl: String = ""): String? {
         // Сначала пробуем subscription_url или subscription из ответа API
         val url = subscriptionUrl ?: subscription
         

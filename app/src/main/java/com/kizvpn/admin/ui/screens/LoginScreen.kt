@@ -83,7 +83,7 @@ fun LoginScreen(
     val savedToken by authRepository?.token?.collectAsState(initial = null) ?: remember { mutableStateOf<String?>(null) }
     val biometricEnabled by authRepository?.biometricEnabled?.collectAsState(initial = false) ?: remember { mutableStateOf(false) }
     
-    var apiUrl by remember { mutableStateOf("https://host.kizvpn.ru/api") }
+    var apiUrl by remember { mutableStateOf("") }
     var token by remember { mutableStateOf("") }
     var isLoading by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
@@ -245,7 +245,7 @@ fun LoginScreen(
                     label = { Text("URL API") },
                     modifier = Modifier.fillMaxWidth(),
                     singleLine = true,
-                    placeholder = { Text("https://host.kizvpn.ru/api") },
+                    placeholder = { Text("https://your-api-server.com/api") },
                     supportingText = {
                         Text("Адрес API панели PasarGuard", style = MaterialTheme.typography.bodySmall)
                     }
@@ -367,7 +367,7 @@ fun LoginScreen(
                                 style = MaterialTheme.typography.titleSmall
                             )
                             Text(
-                                text = "1. Открой в браузере: https://host.kizvpn.ru/panel/",
+                                text = "1. Открой в браузере: https://your-panel-url.com/",
                                 style = MaterialTheme.typography.bodySmall
                             )
                             Text(

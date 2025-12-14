@@ -76,30 +76,18 @@ class ApiClient(private val baseUrl: String, private val token: String) {
     val pasarguardApi: PasarGuardApi = retrofit.create(PasarGuardApi::class.java)
     
     // Bot API клиент для получения данных из PostgreSQL
-    // Базовый URL для Bot API работает на сервере 10.10.10.120:8080
-    // Если PasarGuard API через домен (host.kizvpn.ru), то Bot API на том же домене, но порт 8080
-    // Если PasarGuard API через IP (10.10.10.110), то Bot API на 10.10.10.120:8080
+    // Bot API URL определяется динамически на основе базового URL
+    // Пользователь должен настроить Bot API URL в соответствии со своей инфраструктурой
     val botApi: BotApi? = try {
         val base = baseUrl.removeSuffix("/api").removeSuffix("/")
         android.util.Log.d("ApiClient", "Исходный baseUrl: $baseUrl, base после обработки: $base")
         
         val botApiUrl = when {
-            // Если это домен (host.kizvpn.ru), используем IP адрес бот сервера (порт 8080 не проброшен через домен)
-            base.contains("host.kizvpn.ru") || base.contains("kizvpn.ru") -> {
-                // Bot API работает только на локальной сети, используем IP адрес бот сервера
-                val url = "http://10.10.10.120:8080"
-                android.util.Log.d("ApiClient", "Домен найден, используем IP адрес бот сервера: $url")
-                url
-            }
-            // Если это IP 10.10.10.110 (VPN сервер), Bot API на 10.10.10.120 (Бот сервер)
-            base.contains("10.10.10.110") -> {
-                "http://10.10.10.120:8080"
-            }
             // Если это другой IP или localhost, заменяем порт на 8080
             base.contains(":8000") -> {
                 base.replace(":8000", ":8080")
             }
-            // По умолчанию - добавляем :8080
+            // По умолчанию - добавляем :8080 к хосту
             else -> {
                 val host = base.replace("https://", "").replace("http://", "").split("/").first()
                 "http://$host:8080"

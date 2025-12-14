@@ -494,7 +494,7 @@ class VpnRepository(private val apiClient: ApiClient) {
             val botApi = apiClient.botApi
             if (botApi == null) {
                 android.util.Log.e("VpnRepository", "Bot API клиент не инициализирован.")
-                return Result.failure(Exception("Bot API недоступен. Убедитесь, что сервер 10.10.10.120:8080 запущен."))
+                return Result.failure(Exception("Bot API недоступен. Убедитесь, что Bot API сервер запущен и доступен."))
             }
             
             android.util.Log.d("VpnRepository", "Отправка запроса POST /api/server/$serverIp/reboot")
@@ -503,19 +503,19 @@ class VpnRepository(private val apiClient: ApiClient) {
             Result.success(response)
         } catch (e: java.net.SocketTimeoutException) {
             android.util.Log.e("VpnRepository", "Таймаут подключения к Bot API", e)
-            Result.failure(Exception("Таймаут подключения к Bot API. Проверьте, что сервер 10.10.10.120:8080 запущен и доступен."))
+            Result.failure(Exception("Таймаут подключения к Bot API. Проверьте, что Bot API сервер запущен и доступен."))
         } catch (e: java.net.ConnectException) {
             android.util.Log.e("VpnRepository", "Ошибка подключения к Bot API", e)
-            Result.failure(Exception("Не удалось подключиться к Bot API (10.10.10.120:8080). Убедитесь, что сервер запущен."))
+            Result.failure(Exception("Не удалось подключиться к Bot API. Убедитесь, что Bot API сервер запущен."))
         } catch (e: java.io.IOException) {
             android.util.Log.e("VpnRepository", "Ошибка ввода-вывода при подключении к Bot API", e)
             val errorMsg = when {
                 e.message?.contains("unexpected end of stream") == true -> 
-                    "Соединение с Bot API разорвано. Возможно, сервер 10.10.10.120:8080 не запущен или недоступен."
+                    "Соединение с Bot API разорвано. Возможно, Bot API сервер не запущен или недоступен."
                 e.message?.contains("Connection reset") == true -> 
-                    "Соединение с Bot API было сброшено. Проверьте, что сервер 10.10.10.120:8080 запущен."
+                    "Соединение с Bot API было сброшено. Проверьте, что Bot API сервер запущен."
                 else -> 
-                    "Ошибка сети: ${e.message}. Проверьте подключение к серверу 10.10.10.120:8080."
+                    "Ошибка сети: ${e.message}. Проверьте подключение к Bot API серверу."
             }
             Result.failure(Exception(errorMsg))
         } catch (e: retrofit2.HttpException) {

@@ -13,7 +13,7 @@
     <!-- Экран входа -->
     <string name="login_title">Вход в админ-панель</string>
     <string name="login_api_url">URL API</string>
-    <string name="login_api_url_hint">https://host.kizvpn.ru/api</string>
+    <string name="login_api_url_hint">https://your-api-server.com/api</string>
     <string name="login_token">JWT токен</string>
     <string name="login_token_hint">Введите JWT токен</string>
     <string name="login_button">Войти</string>

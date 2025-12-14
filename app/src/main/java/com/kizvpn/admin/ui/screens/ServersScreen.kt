@@ -73,20 +73,20 @@ fun ServersScreen(
                             onDismissRequest = { showRebootMenu = false }
                         ) {
                             DropdownMenuItem(
-                                text = { Text("Перезагрузить VPN сервер (10.10.10.110)") },
+                                text = { Text("Перезагрузить VPN сервер") },
                                 onClick = {
                                     showRebootMenu = false
-                                    showRebootDialog = "10.10.10.110"
+                                    showRebootDialog = "VPN_SERVER_IP" // Замените на BuildConfig.VPN_SERVER_IP
                                 },
                                 leadingIcon = {
                                     Icon(Icons.Default.Cloud, null)
                                 }
                             )
                             DropdownMenuItem(
-                                text = { Text("Перезагрузить Bot сервер (10.10.10.120)") },
+                                text = { Text("Перезагрузить Bot сервер") },
                                 onClick = {
                                     showRebootMenu = false
-                                    showRebootDialog = "10.10.10.120"
+                                    showRebootDialog = "BOT_SERVER_IP" // Замените на BuildConfig.BOT_SERVER_IP
                                 },
                                 leadingIcon = {
                                     Icon(Icons.Default.Settings, null)
@@ -377,7 +377,7 @@ fun NodeCard(node: Node, apiBaseUrl: String? = null) {
                         // Показываем API URL, если доступен, иначе "Локальный сервер"
                         apiBaseUrl?.let { url ->
                             try {
-                                // Извлекаем хост из URL (например, из https://host.kizvpn.ru/api получаем host.kizvpn.ru)
+                                // Извлекаем хост из URL (например, из https://your-server.com/api получаем your-server.com)
                                 val host = url
                                     .removePrefix("https://")
                                     .removePrefix("http://")

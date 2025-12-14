@@ -176,7 +176,7 @@ class UsersViewModel(
                         ?: subscriptionMap.values.firstOrNull()
                     
                     if (subUrl != null && subUrl.isNotBlank()) {
-                        val publicBaseUrl = baseUrl?.removeSuffix("/api")?.removeSuffix("/") ?: "https://host.kizvpn.ru"
+                        val publicBaseUrl = baseUrl?.removeSuffix("/api")?.removeSuffix("/") ?: ""
                         val fullUrl = if (subUrl.startsWith("http")) {
                             subUrl
                         } else if (subUrl.startsWith("/")) {
@@ -192,7 +192,7 @@ class UsersViewModel(
                 }
                 
                 // Если не получили через endpoint, пробуем построить из username (fallback)
-                val publicBaseUrl = baseUrl?.removeSuffix("/api")?.removeSuffix("/") ?: "https://host.kizvpn.ru"
+                val publicBaseUrl = baseUrl?.removeSuffix("/api")?.removeSuffix("/") ?: ""
                 android.util.Log.d("UsersViewModel", "   baseUrl=$baseUrl")
                 android.util.Log.d("UsersViewModel", "   publicBaseUrl=$publicBaseUrl")
                 android.util.Log.d("UsersViewModel", "   username=${user.username}")
@@ -297,7 +297,7 @@ class UsersViewModel(
             
             // Если нашли пользователя (из списка или API), строим subscription URL
             if (user != null) {
-                val publicBaseUrl = baseUrl?.removeSuffix("/api")?.removeSuffix("/") ?: "https://host.kizvpn.ru"
+                val publicBaseUrl = baseUrl?.removeSuffix("/api")?.removeSuffix("/") ?: ""
                 val subscriptionUrl = user.getSubscriptionUrl(publicBaseUrl)
                 if (subscriptionUrl != null && subscriptionUrl.isNotBlank()) {
                     android.util.Log.d("UsersViewModel", "✅ Subscription URL получен: $subscriptionUrl")
