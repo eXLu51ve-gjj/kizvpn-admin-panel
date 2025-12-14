@@ -1,6 +1,6 @@
 <div align="center">
 
-![KIZ VPN Admin Panel](logo.png)
+<img src="logo.png" width="200"/>
 
 # KIZ VPN Admin Panel
 
@@ -68,16 +68,17 @@
 
 ### 📸 Скриншоты
 
-<div align="center">
-
-![Dashboard](screenshots/dashboard.jpg)
-![Users](screenshots/users.jpg)
-![Payments](screenshots/payments.jpg)
-
-![Statistics](screenshots/statistics.jpg)
-![Login](screenshots/login.jpg)
-
-</div>
+<table>
+<tr>
+<td><img src="screenshots/dashboard.jpg" width="180"/><br/><b>Dashboard</b></td>
+<td><img src="screenshots/users.jpg" width="180"/><br/><b>Users</b></td>
+<td><img src="screenshots/payments.jpg" width="180"/><br/><b>Payments</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/statistics.jpg" width="180"/><br/><b>Statistics</b></td>
+<td><img src="screenshots/login.jpg" width="180"/><br/><b>Login</b></td>
+</tr>
+</table>
 
 ### 🚀 Скачать
 
@@ -245,16 +246,17 @@ app/
 
 ### 📸 Screenshots
 
-<div align="center">
-
-![Dashboard](screenshots/dashboard.jpg)
-![Users](screenshots/users.jpg)
-![Payments](screenshots/payments.jpg)
-
-![Statistics](screenshots/statistics.jpg)
-![Login](screenshots/login.jpg)
-
-</div>
+<table>
+<tr>
+<td><img src="screenshots/dashboard.jpg" width="180"/><br/><b>Dashboard</b></td>
+<td><img src="screenshots/users.jpg" width="180"/><br/><b>Users</b></td>
+<td><img src="screenshots/payments.jpg" width="180"/><br/><b>Payments</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/statistics.jpg" width="180"/><br/><b>Statistics</b></td>
+<td><img src="screenshots/login.jpg" width="180"/><br/><b>Login</b></td>
+</tr>
+</table>
 
 ### 🚀 Download
 
