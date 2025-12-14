@@ -16,9 +16,10 @@ app/build
 .cxx
 local.properties
 
-# APK файлы
+# APK файлы (исключая releases/)
 *.apk
 *.aab
+!releases/*.apk
 
 # Скриншоты (для приватного репозитория можно включить, для публичного - убрать)
 # screenshots/
