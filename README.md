@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="logo.png" width="200"/>
+<img src="logo.png" width="300"/>
 
 # KIZ VPN Admin Panel
 
@@ -70,13 +70,13 @@
 
 <table>
 <tr>
-<td><img src="screenshots/dashboard.jpg" width="240"/><br/><b>Dashboard</b></td>
-<td><img src="screenshots/users.jpg" width="240"/><br/><b>Users</b></td>
-<td><img src="screenshots/payments.jpg" width="240"/><br/><b>Payments</b></td>
+<td><img src="screenshots/dashboard.jpg" width="250"/><br/><b>Dashboard</b></td>
+<td><img src="screenshots/users.jpg" width="250"/><br/><b>Users</b></td>
+<td><img src="screenshots/payments.jpg" width="250"/><br/><b>Payments</b></td>
 </tr>
 <tr>
-<td><img src="screenshots/statistics.jpg" width="240"/><br/><b>Statistics</b></td>
-<td><img src="screenshots/login.jpg" width="240"/><br/><b>Login</b></td>
+<td><img src="screenshots/statistics.jpg" width="250"/><br/><b>Statistics</b></td>
+<td><img src="screenshots/login.jpg" width="250"/><br/><b>Login</b></td>
 </tr>
 </table>
 
@@ -248,13 +248,13 @@ app/
 
 <table>
 <tr>
-<td><img src="screenshots/dashboard.jpg" width="240"/><br/><b>Dashboard</b></td>
-<td><img src="screenshots/users.jpg" width="240"/><br/><b>Users</b></td>
-<td><img src="screenshots/payments.jpg" width="240"/><br/><b>Payments</b></td>
+<td><img src="screenshots/dashboard.jpg" width="250"/><br/><b>Dashboard</b></td>
+<td><img src="screenshots/users.jpg" width="250"/><br/><b>Users</b></td>
+<td><img src="screenshots/payments.jpg" width="250"/><br/><b>Payments</b></td>
 </tr>
 <tr>
-<td><img src="screenshots/statistics.jpg" width="240"/><br/><b>Statistics</b></td>
-<td><img src="screenshots/login.jpg" width="240"/><br/><b>Login</b></td>
+<td><img src="screenshots/statistics.jpg" width="250"/><br/><b>Statistics</b></td>
+<td><img src="screenshots/login.jpg" width="250"/><br/><b>Login</b></td>
 </tr>
 </table>
 
