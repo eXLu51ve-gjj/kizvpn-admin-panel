@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.KIZVPNAdmin" parent="Theme.AppCompat.Light.NoActionBar" />
+    
+    <!-- Тема для MainActivity с черным фоном при запуске -->
+    <style name="Theme.KIZVPNAdmin.Splash" parent="Theme.KIZVPNAdmin">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- Для Android 12+ -->
+        <item name="android:windowSplashScreenBackground">@android:color/black</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@null</item>
+    </style>
+</resources>
+
+

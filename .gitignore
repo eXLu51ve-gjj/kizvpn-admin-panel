@@ -1,0 +1,29 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+app/build
+**/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# APK файлы
+*.apk
+*.aab
+
+# Скриншоты (для приватного репозитория можно включить, для публичного - убрать)
+# screenshots/
+# *.png (если только скриншоты приложения)
+
+# Логи и временные файлы
+*.log
+*.tmp

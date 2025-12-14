@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KIZ VPN Admin</string>
+    
+    <!-- Навигация -->
+    <string name="nav_dashboard">Главная</string>
+    <string name="nav_servers">Серверы</string>
+    <string name="nav_users">Пользователи</string>
+    <string name="nav_payments">Платежи</string>
+    <string name="nav_statistics">Статистика</string>
+    <string name="nav_settings">Настройки</string>
+    
+    <!-- Экран входа -->
+    <string name="login_title">Вход в админ-панель</string>
+    <string name="login_api_url">URL API</string>
+    <string name="login_api_url_hint">https://host.kizvpn.ru/api</string>
+    <string name="login_token">JWT токен</string>
+    <string name="login_token_hint">Введите JWT токен</string>
+    <string name="login_button">Войти</string>
+    <string name="login_error">Ошибка входа</string>
+    
+    <!-- Общие -->
+    <string name="loading">Загрузка...</string>
+    <string name="error">Ошибка</string>
+    <string name="retry">Повторить</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="edit">Редактировать</string>
+    <string name="refresh">Обновить</string>
+    
+    <!-- Платежи -->
+    <string name="payment_status_pending">Ожидает оплаты</string>
+    <string name="payment_status_paid">Оплачено</string>
+    <string name="payment_status_failed">Ошибка</string>
+    <string name="payment_generate_qr">Сгенерировать QR-код</string>
+    
+    <!-- Статистика -->
+    <string name="stats_total_users">Всего пользователей</string>
+    <string name="stats_active_users">Активных</string>
+    <string name="stats_total_revenue">Выручка</string>
+    <string name="stats_today_revenue">Сегодня</string>
+</resources>
+
+
